@@ -115,6 +115,15 @@
 .contact-btn:hover{transform:translateY(-3px);background:var(--rose-deep)}
 .contact-alt{margin-top:18px;color:var(--ink-soft);font-size:.95rem}
 .contact-alt a{color:var(--rose-deep);font-weight:600}
+.contact-form{max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:14px;text-align:left}
+.contact-form input,.contact-form textarea{
+  font-family:'Manrope',sans-serif;font-size:1rem;color:var(--ink);
+  padding:14px 16px;border:1px solid var(--line);border-radius:12px;
+  background:#fff;transition:border-color .15s;
+}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--rose)}
+.contact-form textarea{resize:vertical}
+.contact-form .contact-btn{border:none;cursor:pointer;margin-top:4px;align-self:center}
 </style>
 </head>
 <body>
@@ -236,8 +245,12 @@
   <div class="wrap">
     <div class="sec-head"><h2>Get in touch ✉️</h2></div>
     <p class="sec-sub">Have a question or want to work together? I'd love to hear from you.</p>
-    <a class="contact-btn" href="mailto:jgpadill@ncsu.edu?subject=Hello%20from%20your%20portfolio">Send me an email</a>
-    <p class="contact-alt">or reach me directly at <a href="mailto:jgpadill@ncsu.edu">jgpadill@ncsu.edu</a></p>
+    <form class="contact-form" action="https://formspree.io/f/xaqzdgqq" method="POST">
+  <input type="email" name="email" placeholder="Your email" required>
+  <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+  <button type="submit" class="contact-btn">Send message</button>
+</form>
+<p class="contact-alt">or email directly at <a href="mailto:jgpadill@ncsu.edu">jgpadill@ncsu.edu</a></p>
   </div>
 </section>
   <div class="wrap">

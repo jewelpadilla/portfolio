@@ -41,7 +41,18 @@
   .nav-links a:hover{color:var(--rose-deep)}
 
   /* hero */
-  .hero{padding:90px 0 70px}
+ .hero{padding:90px 0 70px;display:flex;align-items:center;gap:56px}
+.hero-text{flex:1}
+.hero-photo{
+  width:280px;height:280px;flex-shrink:0;
+  border-radius:50%;object-fit:cover;
+  border:5px solid #fff;box-shadow:0 12px 40px rgba(224,96,126,.18);
+}
+@media(max-width:680px){
+  .hero{flex-direction:column-reverse;text-align:center;gap:32px}
+  .hero-photo{width:200px;height:200px}
+  .hero p{margin:0 auto}
+}
   .wave{display:inline-block;font-size:2rem;animation:wave 2.4s ease-in-out infinite;transform-origin:70% 70%}
   @keyframes wave{0%,60%,100%{transform:rotate(0)}10%{transform:rotate(16deg)}20%{transform:rotate(-8deg)}30%{transform:rotate(16deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(10deg)}}
   @media(prefers-reduced-motion:reduce){.wave{animation:none}html{scroll-behavior:auto}}
@@ -147,9 +158,12 @@
 </nav>
 
 <div class="wrap hero" id="top">
-  <span class="wave">👋</span>
-  <h1>Hi! I'm <span class="name">Jewel</span></h1>
-  <p>I find my purpose in <span class="hl">understanding how people think, attend, and decide</span> — from the cognitive science of attention to designing technology that fits the way analysts actually work.</p>
+  <div class="hero-text">
+    <span class="wave">👋</span>
+    <h1>Hi! I'm <span class="name">Jewel</span></h1>
+    <p>I find my purpose in <span class="hl">understanding how people think, attend, and decide</span> — from the cognitive science of attention to designing technology that fits the way analysts actually work.</p>
+  </div>
+  <img class="hero-photo" src="jewel.jpg" alt="Jewel Padilla">
 </div>
 
 <section id="work">

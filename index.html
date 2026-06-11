@@ -124,6 +124,12 @@
 .contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--rose)}
 .contact-form textarea{resize:vertical}
 .contact-form .contact-btn{border:none;cursor:pointer;margin-top:4px;align-self:center}
+.copy-email{
+  background:none;border:none;cursor:pointer;padding:0;
+  font-family:'Manrope',sans-serif;font-size:inherit;
+  color:var(--rose-deep);font-weight:600;
+}
+.copy-email:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -250,7 +256,9 @@
   <textarea name="message" placeholder="Your message" rows="5" required></textarea>
   <button type="submit" class="contact-btn">Send message</button>
 </form>
-<p class="contact-alt">or email directly at <a href="mailto:jgpadill@ncsu.edu">jgpadill@ncsu.edu</a></p>
+<p class="contact-alt">or email directly at
+  <button type="button" class="copy-email" onclick="copyEmail(this)">jgpadill@ncsu.edu</button>
+</p>
   </div>
 </section>
   <div class="wrap">
@@ -264,6 +272,13 @@
   </div>
 
 </footer>
-
+<script>
+function copyEmail(btn){
+  navigator.clipboard.writeText("jgpadill@ncsu.edu");
+  const original = btn.textContent;
+  btn.textContent = "Copied! ✓";
+  setTimeout(() => { btn.textContent = original; }, 1500);
+}
+</script>
 </body>
 </html>

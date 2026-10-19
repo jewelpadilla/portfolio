@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Jewel Padilla</title>
+<meta name="description" content="About Jewel Padilla, a Ph.D. student in Human Factors and Applied Cognition at NC State studying human-automation interaction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;--ink:#2C2530;--ink-soft:#6B6070;
+    --rose:#E0607E;--rose-deep:#C2476A;--blush:#FBEEF1;--line:#EFE7EA;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:980px;margin:0 auto;padding:0 28px}
+
+  /* Nav (same as the rest of the site) */
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto;padding:20px 28px}
+  .logo{font-family:'Cedarville Cursive',cursive;font-weight:700;font-size:2rem;}
+  .logo b{color:var(--rose)}
+  .nav-links{display:flex;gap:30px;font-weight:600;font-size:.95rem}
+  .nav-links a{color:var(--ink-soft);transition:color .15s}
+  .nav-links a:hover,.nav-links a.active{color:var(--rose-deep)}
+
+  /* Top of page */
+  .about-hero{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center;padding:96px 0 72px}
+  .kicker{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:16px}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,6vw,3.6rem);letter-spacing:-.02em;line-height:1.08;margin-bottom:24px}
+  .lead{color:var(--ink-soft);font-size:1.15rem}
+  .portrait{width:100%;max-width:340px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:8px solid var(--blush);justify-self:center}
+
+  /* Sections */
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.9rem;letter-spacing:-.01em;margin-bottom:20px}
+  section p{margin-bottom:18px;max-width:68ch}
+  section p:last-child{margin-bottom:0}
+
+  /* Interest tags */
+  .tags{display:flex;flex-wrap:wrap;gap:10px}
+  .tag{background:var(--blush);color:var(--rose-deep);font-weight:700;font-size:.85rem;padding:8px 18px;border-radius:999px}
+
+  /* Experience / education list */
+  .entries{display:grid;gap:28px}
+  .entry{display:grid;grid-template-columns:160px 1fr;gap:24px}
+  .entry .when{color:var(--rose-deep);font-weight:700;font-size:.9rem;padding-top:3px}
+  .entry h3{font-size:1.05rem;font-weight:700;line-height:1.4}
+  .entry .where{color:var(--ink-soft);font-size:.95rem;margin-bottom:6px}
+  .entry p{color:var(--ink-soft);font-size:.98rem;margin:0}
+
+  /* Closing call to action */
+  .cta{background:var(--blush);border-radius:24px;padding:48px;text-align:center;margin:24px 0 80px}
+  .cta h2{margin-bottom:12px}
+  .cta p{color:var(--ink-soft);margin:0 auto 28px;max-width:46ch}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:700;font-size:.95rem;padding:10px 24px;border-radius:999px;border:1px solid var(--rose);transition:background .18s,color .18s}
+  .btn.solid{background:var(--rose);color:#fff}
+  .btn.solid:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+  .btn.outline{color:var(--rose)}
+  .btn.outline:hover{background:var(--rose);color:#fff}
+
+  footer{padding:40px 0;border-top:1px solid var(--line);text-align:center}
+  footer .copy{color:var(--ink-soft);font-size:.95rem}
+  footer .heart{color:var(--rose)}
+
+  /* Phones */
+  @media (max-width:720px){
+    .about-hero{grid-template-columns:1fr;gap:36px;padding:56px 0 48px}
+    .portrait{max-width:240px;order:-1}
+    .entry{grid-template-columns:1fr;gap:4px}
+    .cta{padding:36px 24px}
+    .nav-links{gap:16px;font-size:.88rem}
+    .nav-inner{padding:16px 20px}
+    .wrap{padding:0 20px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">Jewel<b>.</b></a>
+    <div class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#writings">Writings</a>
+      <a href="about.html" class="active">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="CV_jewelpadilla.pdf" target="_blank">CV</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- TOP OF PAGE -->
+  <div class="about-hero">
+    <div>
+      <p class="kicker">About</p>
+      <h1>A little about me</h1>
+      <p class="lead">Hi! My name is Jewel Padilla, and I am a Ph.D. student in Human Factors and Applied Cognition at North Carolina State University. My research focuses on <strong>human-automation interaction</strong>, with particular interests in how people use and trust automated systems, emerging technologies, and AI-assisted decision support tools. I am especially interested in understanding how individual differences, such as expertise and perception, influence automation use and performance.</p>
+    </div>
+    <img class="portrait" src="jewel.jpg" alt="Jewel Padilla">
+  </div>
+
+  <!-- RESEARCH -->
+  <section>
+    <h2>My research</h2>
+    <p>Throughout my doctoral studies, I have worked on research involving automation reliance, task-specific experiences, and the design of AI systems intended to support human decision-making in complex environments. Through these experiences, I have developed interests in experimental design, user-centered evaluation, and the development of technologies that enhance human performance while supporting effective collaboration between people and intelligent systems.</p>
+    <!-- EDIT: Optional second paragraph — what question drives your work, or what you're most excited about right now. Delete this comment and the line below if you don't want it. -->
+    <p>[Optional: what question drives your research, or what you're most excited about right now.]</p>
+  </section>
+
+  <!-- INTERESTS -->
+  <section>
+    <h2>Research interests</h2>
+    <!-- EDIT: Add, remove, or rename tags. Each one is a single <span class="tag"> line. -->
+    <div class="tags">
+      <span class="tag">Human–automation interaction</span>
+      <span class="tag">Human–AI interaction</span>
+      <span class="tag">Sensemaking</span>
+      <span class="tag">Trust &amp; reliance</span>
+      <span class="tag">Expertise</span>
+      <span class="tag">Attention &amp; perception</span>
+      <span class="tag">Experimental design</span>
+      <span class="tag">User-centered evaluation</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Experience</h2>
+    <!-- EDIT: Fill in the bracketed parts. To add another role, copy one whole <div class="entry">...</div> block and paste it below. -->
+    <div class="entries">
+      <div class="entry">
+        <div class="when">2026</div>
+        <div>
+          <h3>Research Intern</h3>
+          <p class="where">Laboratory for Analytic Sciences (SCADS)</p>
+          <p>[One or two sentences on what you did, e.g., leading UX research on makesense.]</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">[Year] – Present</div>
+        <div>
+          <h3>Graduate Research Assistant</h3>
+          <p class="where">Department of Psychology, NC State · CHAT Lab</p>
+          <p>[One or two sentences on your lab work.]</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">[Year] – Present</div>
+        <div>
+          <h3>Instructor, PSY 420: Cognitive Processes</h3>
+          <p class="where">NC State University</p>
+          <p>[One or two sentences on designing and teaching the course.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+    <!-- EDIT: Fill in the bracketed parts. -->
+    <div class="entries">
+      <div class="entry">
+        <div class="when">[Year] – Present</div>
+        <div>
+          <h3>Ph.D., Human Factors and Applied Cognition</h3>
+          <p class="where">North Carolina State University</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">[Year]</div>
+        <div>
+          <h3>[Degree, Major]</h3>
+          <p class="where">North Carolina State University</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONAL -->
+  <section>
+    <h2>Beyond the lab</h2>
+    <!-- EDIT: A few sentences about you outside of research. Delete this whole section (from <section> to </section>) if you'd rather keep the page strictly professional. -->
+    <p>[A few sentences about life outside research.]</p>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="cta">
+    <h2>Let's connect</h2>
+    <p>Have a question or want to work together? I'd love to hear from you.</p>
+    <div class="btns">
+      <a class="btn solid" href="index.html#contact">Get in touch</a>
+      <a class="btn outline" href="CV_jewelpadilla.pdf" target="_blank">View my CV</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="copy">© 2026 with <span class="heart">❤</span> Jewel Padilla</p>
+  </div>
+</footer>
+
+</body>
+</html>

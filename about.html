@@ -34,6 +34,9 @@
   h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,6vw,3.6rem);letter-spacing:-.02em;line-height:1.08;margin-bottom:24px}
   .lead{color:var(--ink-soft);font-size:1.15rem}
   .portrait{width:100%;max-width:340px;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:8px solid var(--blush);justify-self:center}
+       .slideshow{position:relative;overflow:hidden}
+     .slideshow img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+     .slideshow img.active{opacity:1}
 
   /* Sections */
   section{padding:56px 0;border-top:1px solid var(--line)}
@@ -104,7 +107,11 @@
       <h1>A little about me</h1>
       <p class="lead">When I started at NC State, I wanted an academic experience that would answer how humans and technology shape and refine each other. I then took a cognitive processes class, which changed the questions I was asking. I was drawn to human perception and attention, specifically, human decision-making. Once I began working in Dr. Colleen Patton’s CHAT Lab, I encountered the world of human factors psychology for the first time in a hands-on context. My experience in the CHAT lab quickly solidified my interest in human-automation interactions. Now, as a second-year PhD student in Human Factors and Applied Cognition at NC State, I study how users perceive and engage with automation in uncertain, high-risk scenarios.</p>
     </div>
-    <img class="portrait" src="jewel.jpg" alt="Jewel Padilla">
+      <div class="portrait slideshow">
+    <img src="about-1.jpg" alt="Jewel Padilla" class="active">
+     <img src="about-2.jpg" alt="Jewel Presenting">
+     <img src="about-3.jpg" alt="Jewel Presenting">
+   </div>
   </div>
 
   <!-- RESEARCH -->
@@ -210,5 +217,18 @@
   </div>
 </footer>
 
+   <script>
+     (function(){
+       var imgs = document.querySelectorAll('.slideshow img');
+       if (imgs.length < 2) return;
+       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+       var i = 0;
+       setInterval(function(){
+         imgs[i].classList.remove('active');
+         i = (i + 1) % imgs.length;
+         imgs[i].classList.add('active');
+       }, 4000);
+     })();
+   </script>
 </body>
 </html>

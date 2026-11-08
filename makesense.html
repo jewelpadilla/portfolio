@@ -57,7 +57,7 @@
   figcaption{color:var(--ink-soft);font-size:.86rem;line-height:1.6;margin-top:10px}
   figure img{display:block;width:100%}
      figure img.paper-fig{border:2px solid var(--line);border-radius:0}
-  figure img.paper-fig.small{max-width:540px}
+     figure img.paper-fig.small{max-width:540px;margin:0 auto}
 
   /* End of page */
   .end{border-top:1px solid var(--line);margin-top:56px;padding:32px 0 72px}
@@ -134,7 +134,7 @@
     <figcaption>Figure 1 from the technical report. The left column is the analytic and data path; the right column is the governance record. Every verdict is logged, and the report builder ties each claim to evidence rows before the cited report goes back to the agent.</figcaption>
   </figure>
 
-  <p>The analyst's declared purpose is part of the policy. In one test, the same analyst ran the same query on the same medical record three times, changing only the stated purpose:</p>
+  <p>The analyst’s declared purpose is incorporated into the policy itself. In one test, the same analyst submitted the same query on the same medical record three times, and only the stated purpose was changed:</p>
 
   <figure>
     <img class="paper-fig small" src="makesense-purpose-table.png" alt="Table: injury_management purpose is permitted and the analyst sees the full record; trade_analysis is redacted and fields are removed; public_reporting is denied with no rows returned.">

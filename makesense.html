@@ -60,11 +60,15 @@
      figure img.paper-fig.small{max-width:540px;margin:0 auto}
 
   /* End of page */
-  .end{border-top:1px solid var(--line);margin-top:56px;padding:32px 0 72px}
-  .end p{font-size:.95rem;color:var(--ink-soft);margin-bottom:12px}
-  .end .links{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:24px;font-weight:700}
-  .end .links a{color:var(--rose-deep)}
-  .end .links a:hover{text-decoration:underline}
+  .end{border-top:1px solid var(--line);margin-top:56px;padding:56px 0 80px;text-align:center}
+  .end h2{margin:0 0 12px}
+  .end p{font-size:.95rem;color:var(--ink-soft);max-width:56ch;margin:0 auto 28px}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:700;font-size:.95rem;padding:11px 24px;border-radius:999px;border:1px solid var(--rose);transition:background .18s,color .18s}
+  .btn.solid{background:var(--rose);color:#fff}
+  .btn.solid:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+  .btn.outline{color:var(--rose)}
+  .btn.outline:hover{background:var(--rose);color:#fff}
 
   footer{padding:40px 0;border-top:1px solid var(--line);text-align:center}
   footer .copy{color:var(--ink-soft);font-size:.95rem}
@@ -211,10 +215,11 @@
   </figure>
 
   <div class="end">
-    <p>Padilla, J. G., Barea, A., Johnson, B., &amp; Tarosky, J. (2026). makesense: A governed offline interface for multi-source intelligence sensemaking [Technical report]. Summer Conference on Applied Data Science, Laboratory for Analytic Sciences, North Carolina State University. <a class="inline" href="https://drive.google.com/file/d/12M88vWdvlc4wi1Y4qT73LkoubDq50yg_/view" target="_blank">Read the report</a></p>
-    <div class="links">
-      <a href="index.html#work">← All projects</a>
-      <a href="aspire.html">Next project →</a>
+    <h2>Read the full report</h2>
+    <p>Padilla, J. G., Barea, A., Johnson, B., &amp; Tarosky, J. (2026). <em>makesense: A governed offline interface for multi-source intelligence sensemaking.</em> SCADS 2026 Technical Report, Laboratory for Analytic Sciences, North Carolina State University.</p>
+    <div class="btns">
+      <a class="btn solid" href="https://drive.google.com/file/d/12M88vWdvlc4wi1Y4qT73LkoubDq50yg_/view" target="_blank">View technical report</a>
+      <a class="btn outline" href="aspire.html">Next project →</a>
     </div>
   </div>
 

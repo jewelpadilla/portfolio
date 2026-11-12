@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Expertise &amp; GPS Automation | Jewel Padilla</title>
+<meta name="description" content="How task-specific expertise shapes whether people choose to use a GPS assistant in a simulated navigation task. HFES 2026.">
+<meta name="author" content="Jewel Padilla">
+<meta property="og:site_name" content="Jewel G. Padilla">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jewelpadilla.github.io/portfolio/gps.html">
+<meta property="og:title" content="Expertise &amp; GPS Automation | Jewel Padilla">
+<meta property="og:description" content="How task-specific expertise shapes whether people choose to use a GPS assistant in a simulated navigation task. HFES 2026.">
+<meta property="og:image" content="https://jewelpadilla.github.io/portfolio/jewel.jpg">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,9 +23,12 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:980px;margin:0 auto;padding:0 28px}
+  .article{max-width:980px;margin:0 auto;padding:0 28px}
+
+  /* Nav (same as the rest of the site) */
   nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto;padding:20px 28px}
   .logo{font-family:'Cedarville Cursive',cursive;font-weight:700;font-size:2rem;}
@@ -24,22 +36,65 @@
   .nav-links{display:flex;gap:30px;font-weight:600;font-size:.95rem}
   .nav-links a{color:var(--ink-soft);transition:color .15s}
   .nav-links a:hover{color:var(--rose-deep)}
-  .hero{padding:120px 0 80px;text-align:center}
-  .kicker{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:20px}
-  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.02em;line-height:1.08;margin-bottom:24px}
-  .coming{display:inline-block;background:var(--blush);color:var(--rose-deep);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 20px;border-radius:999px;margin-bottom:32px}
-  .desc{color:var(--ink-soft);font-size:1.1rem;max-width:52ch;margin:0 auto 48px}
-  .back{display:inline-block;color:var(--rose);font-weight:700;font-size:.95rem;border:1px solid var(--rose);padding:10px 24px;border-radius:999px;transition:background .18s,color .18s}
-  .back:hover{background:var(--rose);color:#fff}
+
+  /* Top of page */
+  .top{padding:80px 0 8px}
+  .back-link{font-size:.9rem;font-weight:600;color:var(--ink-soft);display:inline-block;margin-bottom:36px}
+  .back-link:hover{color:var(--rose-deep)}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.6rem,6vw,3.6rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:14px}
+  .byline{color:var(--ink-soft);font-size:.95rem;margin-bottom:36px}
+  .question{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.3rem,3vw,1.6rem);line-height:1.4;padding-bottom:40px;border-bottom:1px solid var(--line)}
+
+  /* Body */
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.75rem;letter-spacing:-.01em;line-height:1.2;margin:56px 0 16px}
+  h3{font-size:1.08rem;font-weight:800;line-height:1.4;margin:36px 0 10px}
+  .article p{margin-bottom:18px}
+  .top p{margin-left:auto;margin-right:auto}
+  .top .question{max-width:none}
+  .article a.inline{color:var(--rose-deep);border-bottom:1px solid var(--rose-mid,#F2B8C6)}
+  .article a.inline:hover{border-bottom-color:var(--rose-deep)}
+
+  /* Figures */
+  figure{margin:30px 0 34px}
+  figcaption{color:var(--ink-soft);font-size:.86rem;line-height:1.6;margin-top:10px}
+  figure img{display:block;width:100%}
+     figure img.paper-fig{border:2px solid var(--line);border-radius:0}
+     figure img.paper-fig.small{max-width:540px;margin:0 auto}
+
+  /* End of page */
+  .end{border-top:1px solid var(--line);margin-top:56px;padding:56px 0 80px;text-align:center}
+  .end h2{margin:0 0 12px}
+  .end p{font-size:1.05rem;color:var(--ink-soft);max-width:78ch;margin:0 auto 28px}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:700;font-size:.95rem;padding:11px 24px;border-radius:999px;border:1px solid var(--rose);transition:background .18s,color .18s}
+  .btn.solid{background:var(--rose);color:#fff}
+  .btn.solid:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+  .btn.outline{color:var(--rose)}
+  .btn.outline:hover{background:var(--rose);color:#fff}
+
   footer{padding:40px 0;border-top:1px solid var(--line);text-align:center}
   footer .copy{color:var(--ink-soft);font-size:.95rem}
   footer .heart{color:var(--rose)}
-  @media (max-width:720px){
+
+  /* Phones */
+  @media (max-width:760px){
+    .top{padding:48px 0 4px}
     .nav-links{gap:16px;font-size:.88rem}
     .nav-inner{padding:16px 20px}
-    .wrap{padding:0 20px}
-    .hero{padding:72px 0 56px}
+    .wrap,.article{padding:0 20px}
   }
+  @media (max-width:440px){
+    .nav-links{gap:12px;font-size:.8rem}
+    .logo{font-size:1.6rem}
+    .nav-inner{padding:14px 16px}
+    .wrap,.article{padding:0 16px}
+  }
+  /* Centered title block */
+  .top{text-align:center}
+  .top .back-link{display:block;text-align:left}
+  .program{color:var(--ink-soft);font-size:.95rem;margin-bottom:8px}
+  .names{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 28px;font-weight:400;font-size:.95rem;margin-bottom:36px}
+  .top .question{text-wrap:balance}
   /* Research dropdown in the nav */
   .nav-drop{position:relative;display:flex;align-items:center}
   .nav-drop-toggle{white-space:nowrap}
@@ -86,13 +141,82 @@
   </div>
 </nav>
 
-<div class="wrap hero">
-  <p class="kicker">CHAT Lab · HFES 2026</p>
-  <h1>Expertise &amp; GPS Automation</h1>
-  <span class="coming">coming soon</span>
-  <p class="desc">More about this project is on the way. Check back soon.</p>
-  <a class="back" href="index.html">← back to home</a>
-</div>
+<main class="article">
+
+  <div class="top">
+    <a class="back-link" href="index.html#work">← Research projects</a>
+    <h1>Expertise &amp; GPS Automation</h1>
+    <p class="program">CHAT Lab · Human Factors and Applied Cognition, NC State University</p>
+    <div class="names">
+      <span>Jewel G. Padilla</span>
+      <span>Colleen E. Patton</span>
+    </div>
+    <p class="question">When people get to choose whether to use automation, do they choose well?</p>
+  </div>
+
+  <h2>The why</h2>
+  <p>Automation is now part of everyday life, from smart home devices and digital assistants to the navigation app on your phone. These tools are meant to reduce workload and make tasks easier, but whether they actually help depends on how people use them.</p>
+  <p>We know that trust, workload, system reliability, self-confidence, and how hard a task feels all shape automation use. Those factors still don't fully explain why two people facing the same task with the same tool make different choices about using it. Expertise may be part of the answer, since what someone already knows changes how much help they need.</p>
+  <p>Most research on expertise and automation comes from high-stakes fields like aviation and medicine, where experts are defined by formal training. Everyday tools work differently. GPS is used by people with every level of experience, often with no training at all, so these tools have to support novices and experts at the same time. We wanted to know how people's own knowledge shapes their decision to turn the automation on.</p>
+
+  <h2>What we did</h2>
+  <p>Ninety-one undergraduate students learned the layout of an imaginary town. They studied a map for one minute, studied it again with key locations highlighted, practiced with ten questions while the map was visible, and then answered fifteen questions from memory, like "What street is the bakery on?" Accuracy on those fifteen questions measured their navigational expertise for that town, and we split participants at the median into experts and novices. Experts averaged 83% correct and novices 68%.</p>
+  <p>Participants then completed seven navigation trials on the same map, giving a route between two locations. Before each trial, they chose one of three options: no GPS, a quick look at the GPS route before navigating on their own, or the GPS route for the whole trial. After each trial they rated how well they thought they did. The whole procedure was then repeated with a second map, for fourteen trials in total.</p>
+
+  <figure>
+    <img class="paper-fig" src="gps-map.jpg" alt="A cartoon map of an imaginary town with labeled streets and buildings, and a red GPS route running from Home 300 to the farmer's market.">
+    <figcaption>Figure 1 from the paper. The GPS map, showing a suggested route from Home 300 to the farmer's market.</figcaption>
+  </figure>
+
+  <p>We also measured spatial ability with a computer-based Spatial Orientation Test. Participants imagined standing at one object facing another and pointed to a third, and we scored the average angle of their error, where lower scores mean better spatial orientation.</p>
+
+  <figure>
+    <img class="paper-fig" src="gps-sot.png" alt="The Spatial Orientation Test: an array of objects on the left, and on the right an arrow circle with the instruction to imagine standing at the bell, facing the tree, and point to the drum.">
+    <figcaption>Figure 2 from the paper. The computer-based Spatial Orientation Test, with instructions and the correct answer.</figcaption>
+  </figure>
+
+  <h2>What we found</h2>
+
+  <h3>Experts used the GPS less</h3>
+  <p>As we predicted, experts turned on the GPS significantly less often than novices. On average, novices used it on about 11 of the 14 trials, and experts on about 8.</p>
+
+  <figure>
+    <img class="paper-fig small" src="gps-engagement.png" alt="Bar chart of mean GPS engagement count by group: experts about 8, novices about 11, with standard error bars.">
+    <figcaption>Figure 4 from the paper. Mean number of trials on which each group used the GPS. Error bars are ±1 standard error.</figcaption>
+  </figure>
+
+  <h3>Both groups navigated about equally well</h3>
+  <p>Even though novices relied on the GPS more, the two groups' navigation accuracy wasn't significantly different (85% for experts and 80% for novices). The novices' extra GPS use seems to have made up for what they didn't know about the town. Rather than over-relying on the tool, they used it about as much as they needed to.</p>
+
+  <h3>Spatial ability played a role</h3>
+  <p>In follow-up analyses, people with weaker spatial orientation used the GPS more often, and they also tended to score a little lower on navigational expertise. This suggests our expert and novice groups reflected broader spatial skills, not just how well people memorized one map.</p>
+
+  <figure>
+    <img class="paper-fig small" src="gps-engagement-sot.png" alt="Scatterplot of GPS engagement against Spatial Orientation Test score, with an upward-sloping trend line.">
+    <figcaption>Figure 5 from the paper. GPS engagement plotted against Spatial Orientation Test score. Higher test scores mean more angular error, or weaker spatial orientation.</figcaption>
+  </figure>
+
+  <h3>Confidence didn't predict GPS use</h3>
+  <p>We also expected that more confident participants would use the GPS less, but confidence wasn't related to GPS use, expertise, or spatial ability. This is likely because we asked about confidence after each trial, so it captured how people felt about their performance rather than how confident they felt when deciding whether to use the GPS.</p>
+
+  <h2>Why it matters</h2>
+  <p>Automation use is often treated as a simple yes-or-no choice, which makes it hard to tell blind reliance apart from strategic, deliberate use. Giving people the choice on every trial showed that their decisions weren't random. People used the GPS in ways that matched their own abilities, and their accuracy reflected it.</p>
+  <p>This matters for consumer technology like GPS apps and conversational AI tools such as ChatGPT and Copilot, where users vary widely in what they already know. Unlike professional systems built for trained operators, these tools have to work both for novices who might misuse them and for experts who might not use them enough. Designing automation that people can adjust to their own needs is one way to support both.</p>
+  <p>These results come from map-specific expertise and university students aged 18 to 24, so the next step is testing how they hold up with other ways of measuring expertise, other age groups, and real-world navigation. Future studies should also ask about confidence before each decision, not after.</p>
+
+  <h2>My role</h2>
+  <p>I was first author on this paper. I reviewed the literature on expertise, risk, and automated navigation to shape the research question and hypotheses, then designed the experimental paradigm, including the tasks, maps, and procedures. I also prepared the IRB materials and led data collection.</p>
+
+  <div class="end">
+    <h2>Read the full paper</h2>
+    <p>Padilla, J. G., &amp; Patton, C. E. (2026). Knowing when to use automation: Task-specific expertise and GPS engagement in a navigational task. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 70</em>(1).</p>
+    <div class="btns">
+      <a class="btn solid" href="https://doi.org/10.1177/10711813261498789" target="_blank">View paper</a>
+      <a class="btn outline" href="difficulty.html">Next project →</a>
+    </div>
+  </div>
+
+</main>
 
 <footer>
   <div class="wrap">

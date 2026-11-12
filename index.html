@@ -92,7 +92,7 @@
   /* writings */
   .writings{display:flex;flex-direction:column}
   .write-item{
-    display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;
+    display:grid;grid-template-columns:1fr auto auto;gap:20px;align-items:center;
     padding:24px 4px;border-bottom:1px solid var(--line);transition:padding-left .18s ease;
   }
   .write-item:hover{padding-left:14px}
@@ -123,6 +123,7 @@
     .grid{grid-template-columns:1fr}
     .about{padding:36px 28px}
     .write-meta{display:none}
+    .write-item{grid-template-columns:1fr auto}
   }
 #contact{text-align:center;padding-top:20px}
 #contact .sec-head{justify-content:center}
@@ -244,7 +245,7 @@
       <a class="card" href="gps.html">
         <div class="kicker">Published · ASPIRE HFES Conference 2026</div>
         <h3>Expertise & GPS Automation</h3>
-        <p>How expertise shapes reliance on navigation automation, exploring the trade-off between automation benefits and skill retention, with implications for training and design.</p>
+        <p>How task-specific expertise shapes whether people choose to use a GPS assistant, and how novices who rely on it more still keep pace with experts.</p>
         <div class="tags"><span>Expertise</span><span>Reliance</span><span>Human Factors</span></div>
       </a>
 
@@ -272,6 +273,15 @@
        <p>Technical report from SCADS 2026 on an agentic AI harness for analysts working across graph, relational, and unstructured data.</p>
      </div>
      <span class="write-meta">Technical Report</span>
+     <span class="arrow">→</span>
+   </a>
+
+         <a class="write-item" href="https://doi.org/10.1177/10711813261498789" target="_blank">
+     <div>
+       <h3>Knowing when to use automation: Task-specific expertise and GPS engagement in a navigational task</h3>
+       <p>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 2026, on how navigational expertise and spatial ability shape the choice to use a GPS assistant.</p>
+     </div>
+     <span class="write-meta">Proceedings</span>
      <span class="arrow">→</span>
    </a>
 

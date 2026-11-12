@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASPIRE | Jewel Padilla</title>
+<title>Time Pressure and Automation Use | Jewel Padilla</title>
+<meta name="description" content="How time pressure changes perceived difficulty, performance, and the choice to use a highly accurate automated aid in a visual search task. HFES 2026.">
+<meta name="author" content="Jewel Padilla">
+<meta property="og:site_name" content="Jewel G. Padilla">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jewelpadilla.github.io/portfolio/aspire.html">
+<meta property="og:title" content="Time Pressure and Automation Use | Jewel Padilla">
+<meta property="og:description" content="How time pressure changes perceived difficulty, performance, and the choice to use a highly accurate automated aid in a visual search task. HFES 2026.">
+<meta property="og:image" content="https://jewelpadilla.github.io/portfolio/jewel.jpg">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,9 +23,12 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:980px;margin:0 auto;padding:0 28px}
+  .article{max-width:980px;margin:0 auto;padding:0 28px}
+
+  /* Nav (same as the rest of the site) */
   nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto;padding:20px 28px}
   .logo{font-family:'Cedarville Cursive',cursive;font-weight:700;font-size:2rem;}
@@ -24,16 +36,68 @@
   .nav-links{display:flex;gap:30px;font-weight:600;font-size:.95rem}
   .nav-links a{color:var(--ink-soft);transition:color .15s}
   .nav-links a:hover{color:var(--rose-deep)}
-  .hero{padding:120px 0 80px;text-align:center}
-  .kicker{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:20px}
-  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.02em;line-height:1.08;margin-bottom:24px}
-  .coming{display:inline-block;background:var(--blush);color:var(--rose-deep);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 20px;border-radius:999px;margin-bottom:32px}
-  .desc{color:var(--ink-soft);font-size:1.1rem;max-width:52ch;margin:0 auto 48px}
-  .back{display:inline-block;color:var(--rose);font-weight:700;font-size:.95rem;border:1px solid var(--rose);padding:10px 24px;border-radius:999px;transition:background .18s,color .18s}
-  .back:hover{background:var(--rose);color:#fff}
+
+  /* Top of page */
+  .top{padding:80px 0 8px}
+  .back-link{font-size:.9rem;font-weight:600;color:var(--ink-soft);display:inline-block;margin-bottom:36px}
+  .back-link:hover{color:var(--rose-deep)}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.6rem,6vw,3.6rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:14px}
+  .byline{color:var(--ink-soft);font-size:.95rem;margin-bottom:36px}
+  .question{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.3rem,3vw,1.6rem);line-height:1.4;padding-bottom:40px;border-bottom:1px solid var(--line)}
+
+  /* Body */
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.75rem;letter-spacing:-.01em;line-height:1.2;margin:56px 0 16px}
+  h3{font-size:1.08rem;font-weight:800;line-height:1.4;margin:36px 0 10px}
+  .article p{margin-bottom:18px}
+  .top p{margin-left:auto;margin-right:auto}
+  .top .question{max-width:none}
+  .article a.inline{color:var(--rose-deep);border-bottom:1px solid var(--rose-mid,#F2B8C6)}
+  .article a.inline:hover{border-bottom-color:var(--rose-deep)}
+
+  /* Figures */
+  figure{margin:30px 0 34px}
+  figcaption{color:var(--ink-soft);font-size:.86rem;line-height:1.6;margin-top:10px}
+  figure img{display:block;width:100%}
+     figure img.paper-fig{border:2px solid var(--line);border-radius:0}
+     figure img.paper-fig.small{max-width:540px;margin:0 auto}
+
+  /* End of page */
+  .end{border-top:1px solid var(--line);margin-top:56px;padding:56px 0 80px;text-align:center}
+  .end h2{margin:0 0 12px}
+  .end p{font-size:1.05rem;color:var(--ink-soft);max-width:78ch;margin:0 auto 28px}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:700;font-size:.95rem;padding:11px 24px;border-radius:999px;border:1px solid var(--rose);transition:background .18s,color .18s}
+  .btn.solid{background:var(--rose);color:#fff}
+  .btn.solid:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+  .btn.outline{color:var(--rose)}
+  .btn.outline:hover{background:var(--rose);color:#fff}
+
   footer{padding:40px 0;border-top:1px solid var(--line);text-align:center}
   footer .copy{color:var(--ink-soft);font-size:.95rem}
   footer .heart{color:var(--rose)}
+
+  /* Phones */
+  @media (max-width:760px){
+    .top{padding:48px 0 4px}
+    .nav-links{gap:16px;font-size:.88rem}
+    .nav-inner{padding:16px 20px}
+    .wrap,.article{padding:0 20px}
+  }
+  @media (max-width:440px){
+    .nav-links{gap:12px;font-size:.8rem}
+    .logo{font-size:1.6rem}
+    .nav-inner{padding:14px 16px}
+    .wrap,.article{padding:0 16px}
+  }
+  /* Side-by-side figures */
+  .fig-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:600px){.fig-pair{grid-template-columns:1fr}}
+  /* Centered title block */
+  .top{text-align:center}
+  .top .back-link{display:block;text-align:left}
+  .program{color:var(--ink-soft);font-size:.95rem;margin-bottom:8px}
+  .names{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 28px;font-weight:400;font-size:.95rem;margin-bottom:36px}
+  .top .question{text-wrap:balance}
   /* Research dropdown in the nav */
   .nav-drop{position:relative;display:flex;align-items:center}
   .nav-drop-toggle{white-space:nowrap}
@@ -73,20 +137,98 @@
         </div>
       </div>
       <a href="index.html#writings">Publications</a>
-      <a href="index.html#about">About</a>
+      <a href="about.html">About</a>
       <a href="index.html#contact">Contact</a>
       <a href="CV_jewelpadilla.pdf" target="_blank">CV</a>
     </div>
   </div>
 </nav>
 
-<div class="wrap hero">
-  <p class="kicker">Peer-reviewed · In revision</p>
-  <h1>ASPIRE</h1>
-  <span class="coming">coming soon</span>
-  <p class="desc">More about this project is on the way. Check back soon.</p>
-  <a class="back" href="index.html">← back to home</a>
-</div>
+<main class="article">
+
+  <div class="top">
+    <a class="back-link" href="index.html#work">← Research projects</a>
+    <h1>Time Pressure and Automation Use</h1>
+    <p class="program">CHAT Lab · Human Factors and Applied Cognition, NC State University</p>
+    <div class="names">
+      <span>Jewel G. Padilla</span>
+      <span>Colleen E. Patton</span>
+    </div>
+    <p class="question">When a task starts to feel harder, do people turn to the automation that could help them?</p>
+  </div>
+
+  <h2>The why</h2>
+  <p>More and more often, people get to decide whether to turn an automated tool on at all: a driver choosing to open GPS, someone deciding to ask ChatGPT, a doctor choosing to record a visit with transcription software. Researchers call this discretionary automation. A recurring problem is that even when a system is reliable and the task is hard, people don't use it as often as they should, and their performance suffers for it.</p>
+  <p>One explanation is that people's perceptions are off. They may misjudge how hard a task is, how good the system is, or how well they're doing on their own. In <a class="inline" href="difficulty.html">our earlier study</a>, we made a visual search task harder by adding clutter. People used the automated aid more on the harder trials, but the clutter changed both how hard the task <em>felt</em> and how hard it actually <em>was</em>, so we couldn't tell which one was driving the decision.</p>
+  <p>This study tried to pull those two apart. We used time pressure to make the task feel harder without making it harder, expecting people to rate the timed trials as more difficult, perform just as well, and use the automation more.</p>
+
+  <h2>What we did</h2>
+  <p>Seventy undergraduate students (61 in the final analysis) searched cluttered images for a small bat and pressed a key to say whether it was there. An automated aid was sometimes available: a red box outlining the third of the image that contained the bat, or the whole image when the bat was absent. The aid was 100% accurate, though participants were only told it was highly accurate. It started off on every trial, and participants could turn it on with an on-screen button.</p>
+
+  <figure>
+    <img class="paper-fig" src="tp-stimulus.jpg" alt="Two copies of the same cluttered image of colorful silhouettes. The left image shows the search task; the right adds a red box covering the left third of the image, where the bat is.">
+    <figcaption>Figure 1 from the paper. (a) An example search image, with a blue, inverted bat near the left center. (b) The same image with the automated aid turned on, outlining the third of the image that contains the bat.</figcaption>
+  </figure>
+
+  <p>Everyone started without a time limit. We then set each person's time limit at 1.2 times their own average response time from those untimed trials, so the limit gave them slightly <em>more</em> time than they usually needed. Before the timed trials, participants saw a message like "In the last set of trials, it took you an average of XX.X seconds to respond. This time, you will have XX.X seconds to respond," and a countdown appeared beside each image.</p>
+
+  <figure>
+    <img class="paper-fig" src="tp-timed-trial.jpg" alt="A timed trial: a cluttered search image on the left, and on the right the question 'Is the bat present in this image? Press y for yes and n for no,' a bat icon, and a countdown reading 'Time left: 0'.">
+    <figcaption>Figure 2 from the paper. A manual trial with the time limit shown on the right.</figcaption>
+  </figure>
+
+  <p>Participants completed four blocks of 40 trials, in this order: untimed without the aid, untimed with the aid available, timed without the aid, and timed with the aid available. After each block, they rated how difficult it had been on a scale from 0 to 10.</p>
+
+  <h2>What we found</h2>
+
+  <h3>Time pressure made the task feel harder, and it also made it harder</h3>
+  <p>Without the aid, participants rated the timed trials as much harder than the untimed ones (6.54 versus 4.36 out of 10). Their accuracy also dropped, from 95% to 91%. They answered faster under the time limit, averaging 3.2 seconds instead of 5.2, even though the limit gave them more time than they'd been using. Just the idea of a deadline was enough to rush people, so time pressure changed how hard the task actually was, not only how hard it felt.</p>
+
+  <figure>
+    <div class="fig-pair">
+      <img class="paper-fig" src="tp-manual-accuracy.png" alt="Bar chart of accuracy in manual trials: about 95% untimed and 91% timed.">
+      <img class="paper-fig" src="tp-manual-difficulty.png" alt="Bar chart of subjective difficulty in manual trials: about 4.4 untimed and 6.5 timed.">
+    </div>
+    <figcaption>Figures 3 and 4 from the paper. Accuracy (left) and rated difficulty (right) on manual trials without the aid, untimed versus timed. Error bars are one standard error.</figcaption>
+  </figure>
+
+  <h3>Having the aid available didn't erase the effect</h3>
+  <p>Even when a perfectly accurate aid was one click away, the timed trials were still less accurate (95% versus 98%) and still rated as harder (5.14 versus 4.01). People were still rushing, but the deadline didn't stop them from taking the time to turn the aid on when they wanted it.</p>
+
+  <figure>
+    <div class="fig-pair">
+      <img class="paper-fig" src="tp-auto-accuracy.png" alt="Bar chart of accuracy in trials with automation available: about 98% untimed and 95% timed.">
+      <img class="paper-fig" src="tp-auto-difficulty.png" alt="Bar chart of subjective difficulty in trials with automation available: about 4.0 untimed and 5.1 timed.">
+    </div>
+    <figcaption>Figures 5 and 6 from the paper. Accuracy (left) and rated difficulty (right) on trials where the aid was available, untimed versus timed.</figcaption>
+  </figure>
+
+  <h3>People used the aid a little more under pressure, but not enough</h3>
+  <p>Participants turned the aid on for 41% of timed trials compared with 31% of untimed trials. The difference was in the direction we expected, but it wasn't statistically significant. The aid clearly helped when people used it: accuracy was higher on trials where it was on (97% versus 94%), and participants who used it were more accurate overall (98% versus 92%). The drop in performance under time pressure came from people choosing to leave the aid off, not from ignoring it once it was on.</p>
+
+  <figure>
+    <img class="paper-fig small" src="tp-automation-use.png" alt="Bar chart of average automation use: about 31% untimed and 41% timed, with overlapping error bars.">
+    <figcaption>Figure 7 from the paper. Average automation use in untimed and timed trials. Error bars are one standard error.</figcaption>
+  </figure>
+
+  <h2>Why it matters</h2>
+  <p>Most research on time pressure and automation looks at dependence, meaning whether people follow a system's advice once it's in front of them. That work tends to find that pressure pushes people toward over-relying on automation. When people had to decide whether to turn the aid on in the first place, we saw the opposite: they under-used it, leaving a perfectly accurate tool off even when it would have helped.</p>
+  <p>That difference suggests the decision to engage automation and the decision to rely on it may work differently. It also raises a design idea: asking people to actively turn automation on, instead of having it on by default, might be one way to reduce automation bias. More broadly, people's choices about using automation don't seem to be driven only by getting the best possible performance, and understanding what else drives them is the next step.</p>
+  <p>Accuracy was high even without the aid, which limited how much room there was to see differences, and the sample was made up of undergraduate students. Future studies should use tasks with more room for performance to vary and include a wider range of participants.</p>
+
+  <h2>My role</h2>
+  <p>I was first author on this paper, which extended my earlier work on perceived difficulty by asking how time pressure shapes perceived difficulty, objective performance, and the choice to use automation. I analyzed accuracy, difficulty ratings, and automation use across conditions in R, wrote the paper, and revised it in response to peer review. I received the HFES Perception and Performance Technical Group Inclusive Excellence Award to present this work at ASPIRE 2026.</p>
+
+  <div class="end">
+    <h2>Read the full paper</h2>
+    <p>Padilla, J. G., &amp; Patton, C. E. (2026). The impact of time pressure on perceptions of difficulty in an automation-supported task. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 70</em>(1).</p>
+    <div class="btns">
+      <a class="btn solid" href="https://doi.org/10.1177/10711813261498766" target="_blank">View paper</a>
+      <a class="btn outline" href="gps.html">Next project →</a>
+    </div>
+  </div>
+
+</main>
 
 <footer>
   <div class="wrap">

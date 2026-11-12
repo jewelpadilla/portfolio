@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Perceptions of Difficulty | Jewel Padilla</title>
+<meta name="description" content="Where perceived difficulty diverges from actual performance, and how each shapes the choice to use an automated aid in a visual search task. HFES 2025.">
+<meta name="author" content="Jewel Padilla">
+<meta property="og:site_name" content="Jewel G. Padilla">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jewelpadilla.github.io/portfolio/difficulty.html">
+<meta property="og:title" content="Perceptions of Difficulty | Jewel Padilla">
+<meta property="og:description" content="Where perceived difficulty diverges from actual performance, and how each shapes the choice to use an automated aid in a visual search task. HFES 2025.">
+<meta property="og:image" content="https://jewelpadilla.github.io/portfolio/jewel.jpg">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,9 +23,12 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:980px;margin:0 auto;padding:0 28px}
+  .article{max-width:980px;margin:0 auto;padding:0 28px}
+
+  /* Nav (same as the rest of the site) */
   nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto;padding:20px 28px}
   .logo{font-family:'Cedarville Cursive',cursive;font-weight:700;font-size:2rem;}
@@ -24,22 +36,68 @@
   .nav-links{display:flex;gap:30px;font-weight:600;font-size:.95rem}
   .nav-links a{color:var(--ink-soft);transition:color .15s}
   .nav-links a:hover{color:var(--rose-deep)}
-  .hero{padding:120px 0 80px;text-align:center}
-  .kicker{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-deep);margin-bottom:20px}
-  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.02em;line-height:1.08;margin-bottom:24px}
-  .coming{display:inline-block;background:var(--blush);color:var(--rose-deep);font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 20px;border-radius:999px;margin-bottom:32px}
-  .desc{color:var(--ink-soft);font-size:1.1rem;max-width:52ch;margin:0 auto 48px}
-  .back{display:inline-block;color:var(--rose);font-weight:700;font-size:.95rem;border:1px solid var(--rose);padding:10px 24px;border-radius:999px;transition:background .18s,color .18s}
-  .back:hover{background:var(--rose);color:#fff}
+
+  /* Top of page */
+  .top{padding:80px 0 8px}
+  .back-link{font-size:.9rem;font-weight:600;color:var(--ink-soft);display:inline-block;margin-bottom:36px}
+  .back-link:hover{color:var(--rose-deep)}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.6rem,6vw,3.6rem);letter-spacing:-.02em;line-height:1.05;margin-bottom:14px}
+  .byline{color:var(--ink-soft);font-size:.95rem;margin-bottom:36px}
+  .question{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.3rem,3vw,1.6rem);line-height:1.4;padding-bottom:40px;border-bottom:1px solid var(--line)}
+
+  /* Body */
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.75rem;letter-spacing:-.01em;line-height:1.2;margin:56px 0 16px}
+  h3{font-size:1.08rem;font-weight:800;line-height:1.4;margin:36px 0 10px}
+  .article p{margin-bottom:18px}
+  .top p{margin-left:auto;margin-right:auto}
+  .top .question{max-width:none}
+  .article a.inline{color:var(--rose-deep);border-bottom:1px solid var(--rose-mid,#F2B8C6)}
+  .article a.inline:hover{border-bottom-color:var(--rose-deep)}
+
+  /* Figures */
+  figure{margin:30px 0 34px}
+  figcaption{color:var(--ink-soft);font-size:.86rem;line-height:1.6;margin-top:10px}
+  figure img{display:block;width:100%}
+     figure img.paper-fig{border:2px solid var(--line);border-radius:0}
+     figure img.paper-fig.small{max-width:540px;margin:0 auto}
+
+  /* End of page */
+  .end{border-top:1px solid var(--line);margin-top:56px;padding:56px 0 80px;text-align:center}
+  .end h2{margin:0 0 12px}
+  .end p{font-size:1.05rem;color:var(--ink-soft);max-width:78ch;margin:0 auto 28px}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:700;font-size:.95rem;padding:11px 24px;border-radius:999px;border:1px solid var(--rose);transition:background .18s,color .18s}
+  .btn.solid{background:var(--rose);color:#fff}
+  .btn.solid:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+  .btn.outline{color:var(--rose)}
+  .btn.outline:hover{background:var(--rose);color:#fff}
+
   footer{padding:40px 0;border-top:1px solid var(--line);text-align:center}
   footer .copy{color:var(--ink-soft);font-size:.95rem}
   footer .heart{color:var(--rose)}
-  @media (max-width:720px){
+
+  /* Phones */
+  @media (max-width:760px){
+    .top{padding:48px 0 4px}
     .nav-links{gap:16px;font-size:.88rem}
     .nav-inner{padding:16px 20px}
-    .wrap{padding:0 20px}
-    .hero{padding:72px 0 56px}
+    .wrap,.article{padding:0 20px}
   }
+  @media (max-width:440px){
+    .nav-links{gap:12px;font-size:.8rem}
+    .logo{font-size:1.6rem}
+    .nav-inner{padding:14px 16px}
+    .wrap,.article{padding:0 16px}
+  }
+  /* Side-by-side figures */
+  .fig-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media (max-width:600px){.fig-pair{grid-template-columns:1fr}}
+  /* Centered title block */
+  .top{text-align:center}
+  .top .back-link{display:block;text-align:left}
+  .program{color:var(--ink-soft);font-size:.95rem;margin-bottom:8px}
+  .names{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 28px;font-weight:400;font-size:.95rem;margin-bottom:36px}
+  .top .question{text-wrap:balance}
   /* Research dropdown in the nav */
   .nav-drop{position:relative;display:flex;align-items:center}
   .nav-drop-toggle{white-space:nowrap}
@@ -86,13 +144,84 @@
   </div>
 </nav>
 
-<div class="wrap hero">
-  <p class="kicker">CHAT Lab · HFES 2025</p>
-  <h1>Perceptions of Difficulty in an Automation-Supported Task</h1>
-  <span class="coming">coming soon</span>
-  <p class="desc">More about this project is on the way. Check back soon.</p>
-  <a class="back" href="index.html">← back to home</a>
-</div>
+<main class="article">
+
+  <div class="top">
+    <a class="back-link" href="index.html#work">← Research projects</a>
+    <h1>Perceptions of Difficulty in an Automation-Supported Task</h1>
+    <p class="program">CHAT Lab · Human Factors and Applied Cognition, NC State University</p>
+    <div class="names">
+      <span>Jewel G. Padilla</span>
+      <span>Colleen E. Patton</span>
+    </div>
+    <p class="question">Do people turn on automation when a task feels harder, or when it actually is harder?</p>
+  </div>
+
+  <h2>The why</h2>
+  <p>People are increasingly the ones deciding when to use an automated system, whether that means opening GPS, asking ChatGPT, putting on night vision goggles, or setting a calendar reminder. Those decisions are often less than ideal: people skip automation when it would help, and the performance of the person and the system together suffers.</p>
+  <p>You might expect people to lean on automation more when a task is harder, and research on reliance often finds that they do. When the choice to turn the system on is theirs, though, the pattern doesn't always hold. In earlier work, automation use often barely changed even as accuracy dropped. One explanation is that how hard a task <em>feels</em> and how hard it actually <em>is</em> are not the same thing. People often misjudge their own performance, so they may also misjudge how much help a task calls for.</p>
+  <p>This study tested that idea. We tried to make a task feel harder without making it harder, expecting people to turn on an automated aid more often when they rated the task as more difficult, even if their accuracy hadn't changed.</p>
+
+  <h2>What we did</h2>
+  <p>Seventy-three undergraduate students (66 in the final analysis) searched cluttered images for a small bat and indicated whether it was there, with up to nine seconds per image. Images were classified as easy or difficult based on how many objects they contained and how much those objects overlapped. An automated aid was sometimes available: a red box outlining the third of the image that contained the bat, or the whole image when the bat was absent. The aid was 100% accurate, though participants were only told it was highly accurate, and they could turn it on or off on each trial.</p>
+
+  <figure>
+    <img class="paper-fig" src="pd-stimulus.jpg" alt="Two copies of the same cluttered image of colorful silhouettes. The left is the search image; the right adds a red box covering the left third, where the bat is.">
+    <figcaption>Figure 1 from the paper. (a) A sample "easy" image, with the bat blue and upside down on the left side near the center. (b) The same image with the automated aid, a red box covering the third of the screen where the bat is.</figcaption>
+  </figure>
+
+  <p>Participants completed four blocks in this order: easy images without the aid, easy images with the aid available, difficult images without the aid, and difficult images with the aid available. After each block, they rated how difficult it had been on a scale from 0 to 10.</p>
+
+  <h2>What we found</h2>
+
+  <h3>Without the aid, the difficult images were harder, and people noticed</h3>
+  <p>On their own, participants were less accurate on the difficult images (91% versus 97%) and rated them as harder (6.0 versus 5.4 out of 10). Their response times were almost identical, though, at about 4 seconds for both. People didn't slow down to make up for the harder images.</p>
+
+  <figure>
+    <div class="fig-pair">
+      <img class="paper-fig" src="pd-manual-accuracy.png" alt="Bar chart of accuracy in manual trials: about 97% for easy and 91% for difficult images.">
+      <img class="paper-fig" src="pd-manual-difficulty.png" alt="Bar chart of subjective difficulty in manual trials: about 5.4 for easy and 6.0 for difficult images.">
+    </div>
+    <figcaption>Figures 2 and 3 from the paper. Accuracy (left) and rated difficulty (right) on manual trials without the aid, easy versus difficult images. Error bars are one standard error.</figcaption>
+  </figure>
+
+  <h3>People used the aid more on the difficult images</h3>
+  <p>When the aid was available, participants turned it on for 38% of difficult trials compared with 23% of easy trials.</p>
+
+  <figure>
+    <img class="paper-fig small" src="pd-automation-use.png" alt="Bar chart of average automation use: about 23% for easy and 38% for difficult images.">
+    <figcaption>Figure 4 from the paper. Average automation use by difficulty condition. Error bars are one standard error.</figcaption>
+  </figure>
+
+  <h3>With the aid, performance evened out, but the difficult images still felt harder</h3>
+  <p>With the aid available, accuracy was the same for easy and difficult images (97% and 98%). Participants used the aid just enough to bring their performance on the difficult images up to their level on the easy ones. Even so, they still rated the difficult images as harder (5.5 versus 4.6). How hard the task felt and how well people actually did had come apart.</p>
+
+  <figure>
+    <div class="fig-pair">
+      <img class="paper-fig" src="pd-auto-accuracy.png" alt="Bar chart of accuracy in trials with automation available: about 97% for easy and 98% for difficult images.">
+      <img class="paper-fig" src="pd-auto-difficulty.png" alt="Bar chart of subjective difficulty in trials with automation available: about 4.6 for easy and 5.5 for difficult images.">
+    </div>
+    <figcaption>Figures 5 and 6 from the paper. Accuracy (left) and rated difficulty (right) on trials where the aid was available, easy versus difficult images.</figcaption>
+  </figure>
+
+  <h2>Why it matters</h2>
+  <p>Participants used the aid on fewer than 40% of trials on average, much less often than in other studies of discretionary automation, yet they used it well. They turned it on more when the task was harder and in a way that erased the gap between easy and difficult images, bringing the person-and-aid team close to ceiling. Even with a highly reliable aid, they didn't just leave it on for every trial, which suggests that under the right conditions people can make good decisions about when to use automation.</p>
+  <p>The results also show that perceived difficulty doesn't always track performance. If people decide when to use automation based on how hard a task feels, designers need to pay attention to that experience as well as to accuracy. This matters beyond the lab, too. A person with a disability may perform a task just as well as someone without one while putting in far more effort, and an employee can do excellent work while ending every day exhausted. Performance alone can hide how demanding something really is.</p>
+  <p>Because the harder images changed both how hard the task felt and how hard it was on the manual trials, this study couldn't fully separate the two. That question became <a class="inline" href="aspire.html">our follow-up study on time pressure</a>. Future work should also separate the effort of the task itself from the effort of operating the automation, and include people beyond university students.</p>
+
+  <h2>My role</h2>
+  <p>I was first author on this paper, which examined where perceived difficulty diverges from objective difficulty and how each relates to the choice to use automation. I ran the statistical analyses in R, wrote the paper, and presented the findings as a lecture at the 2025 HFES Annual Meeting in Chicago. This work led directly to my follow-up study on time pressure, published at HFES 2026.</p>
+
+  <div class="end">
+    <h2>Read the full paper</h2>
+    <p>Padilla, J. G., &amp; Patton, C. E. (2025). Perceptions of difficulty in an automation-supported task. <em>Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 69</em>(1), 768–773.</p>
+    <div class="btns">
+      <a class="btn solid" href="https://doi.org/10.1177/10711813251360718" target="_blank">View paper</a>
+      <a class="btn outline" href="makesense.html">Back to first project →</a>
+    </div>
+  </div>
+
+</main>
 
 <footer>
   <div class="wrap">
